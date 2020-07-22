@@ -1,0 +1,13 @@
+<!-- <div align="center">
+            {% for i in post %}
+            <div> {{ i[1] }}</div>
+            {% endfor %}
+        </div> -->
+
+<!--<form action="/tweeting/" method="POST">
+            <input type="text" name="TweetTitle" maxlength="500">
+            <p1><br></p1>
+            <textarea name="Tweetontent" rows="4" cols="50"></textarea>
+            <p1><br></p1>
+            <input type="submit" value="Enviar">
+        </form>-->

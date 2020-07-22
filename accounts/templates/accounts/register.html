@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>New User</title>
+    </head>
+    <body>
+        <div>
+            <form method="POST" action="/newuser/">
+                {% csrf_token %}
+                {{ form }}
+                <input type="submit" value="REGISTAR">
+            </form>
+        </div>
+    </body>
+</html>

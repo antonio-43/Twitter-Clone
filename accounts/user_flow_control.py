@@ -1,4 +1,4 @@
-import sqlite3 as sql
+import psycopg2 as sql
 
 def new_user(username, password):
     
@@ -14,9 +14,13 @@ def new_user(username, password):
 def pick_user(username, password):
 
     exist = None
-    conn = sql.connect('database.db')
+    conn = sql.connect(user = 'fxlnjkqd',
+        password = 'hO9EXKi9DXEzZLUupaiKGMN9jqMAzZSA',
+        host = '35.246.126.180',
+        port = '5432',
+        database = 'fxlnjkqd')
     c = conn.cursor()
-    c.execute('SELECT * FROM accounts_user WHERE username=? AND password=?;', (username, password))  # find username and password
+    c.execute('SELECT * FROM accounts_user WHERE username= %s AND password= %s;', (username, password))  # find username and password
     data = c.fetchall() 
     conn.close()
         

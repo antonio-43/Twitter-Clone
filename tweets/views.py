@@ -4,7 +4,7 @@ from django.template.loader import get_template
 from .forms import TweetForm
 from .models import Tweet
 
-import sqlite3 as sql
+import psycopg2 as sql
 
 def index(request):
     template = get_template('Tweets/index.html')
@@ -28,7 +28,11 @@ def make_tweet(request):
 
 def show_tweets(request):
 
-    conn = sql.connect('database.db')
+    conn = sql.connect(user = 'fxlnjkqd',
+        password = 'hO9EXKi9DXEzZLUupaiKGMN9jqMAzZSA',
+        host = '35.246.126.180',
+        port = '5432',
+        database = 'fxlnjkqd')
     c = conn.cursor()
     c.execute('SELECT * FROM Tweets_tweet;')
     data = c.fetchall()

@@ -18,6 +18,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('Tweets.urls')),  # mostrar os tweets + index
+    path('', include('tweets.urls')),  # mostrar os tweets + index
     path('', include('accounts.urls')), # criar um novo user e login
 ]

@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'Tweets',
+    'tweets',
     'accounts',    
 ]
 
@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'TwitterClone.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'database.db'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'fxlnjkqd',
+        'USER': 'fxlnjkqd',
+        'PASSWORD': 'hO9EXKi9DXEzZLUupaiKGMN9jqMAzZSA',
+        'HOST': 'rogue.db.elephantsql.com',
+        'PORT': '5432',
     }
 }
 
@@ -120,5 +124,3 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-
-
